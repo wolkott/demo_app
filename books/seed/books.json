@@ -1,0 +1,119 @@
+[
+    {
+        "model": "books.author",
+        "pk": 1,
+        "fields": {
+            "name": "Jeff Kinney",
+            "address": "Jeff Kinney Lane, Chicago",
+            "url": "wwww.jk.com"
+        }
+    },
+    {
+        "model": "books.author",
+        "pk": 2,
+        "fields": {
+            "name": "Mark Tawin",
+            "address": "200 Twain Ave, Columbus Ohio",
+            "url": "wwww.marktwain.com"
+        }
+    },
+    {
+        "model": "books.author",
+        "pk": 3,
+        "fields": {
+            "name": "James Patterson",
+            "address": "200 Shakers Lane, New York",
+            "url": "wwww.james.com"
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 5,
+        "fields": {
+            "title": "Diary of a Wimpy Kid The Ugly Truth ",
+            "price": "20.99",
+            "author": 1
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 6,
+        "fields": {
+            "title": "Diary of a Wimpy Kid Rodick Rules",
+            "price": "10.99",
+            "author": 1
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 7,
+        "fields": {
+            "title": "Diary of a Wimpy Kid - Big Shot",
+            "price": "14.99",
+            "author": 1
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 8,
+        "fields": {
+            "title": "Diary of a Wimpy Kid - Hard Luck",
+            "price": "12.99",
+            "author": 1
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 9,
+        "fields": {
+            "title": "The Adventures of Huckleberry Finn",
+            "price": "11.99",
+            "author": 2
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 10,
+        "fields": {
+            "title": "The Adventures of Tom Sawyer",
+            "price": "8.99",
+            "author": 2
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 11,
+        "fields": {
+            "title": "The Mysterious Stranger",
+            "price": "13.99",
+            "author": 2
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 12,
+        "fields": {
+            "title": "Public School Hero",
+            "price": "11.99",
+            "author": 3
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 13,
+        "fields": {
+            "title": "Even Funnier",
+            "price": "13.99",
+            "author": 3
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 14,
+        "fields": {
+            "title": "House of Robots",
+            "price": "8.99",
+            "author": 3
+        }
+    }
+]
