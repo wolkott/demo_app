@@ -3,9 +3,16 @@
 {% block title %} Home {% endblock title%}
 
 {% block content %}
+
 <div class="row">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="{% url 'add_author' %}">Add New Author</a>
+        </li>
+    </ul>
+    &nbsp;
     <h4>List of Authors</h4>
-   
+    &nbsp;
     <div>
         <table class="table table-bordered striped table-hover">
             <thead>
@@ -14,19 +21,21 @@
                     <th scope="col">Address</th>
                     <th scope="col">Website Address</th>
                     <th scope="col"></th>
-                  </tr>
+                </tr>
             </thead>
             <tbody>
                 {% for author in author_list %}
-                    <tr>
-                        <td>{{author.name}}</td>
-                        <td>{{author.address}}</td>
-                        <td>{{author.url}}</td>
-                        <td>
-                            <a href="" class="btn btn btn-primary" type="button"><i class="bi bi-zoom-in"></i></a>
-                            <a href="" class="btn btn btn-danger" type="button"><i class="bi bi-trash"></i></a>
-                        </td>
-                    </tr>
+                <tr>
+                    <td>{{author.name}}</td>
+                    <td>{{author.address}}</td>
+                    <td>{{author.url}}</td>
+                    <td>
+                        <a href="author-update/{{author.id}}" class="btn btn btn-success" type="button"><i
+                                class="bi bi-pencil"></i></a>
+                        <a href="author-delete/{{author.id}}" class="btn btn btn-danger" type="button"><i
+                                class="bi bi-trash"></i></a>
+                    </td>
+                </tr>
                 {% endfor %}
             </tbody>
         </table>

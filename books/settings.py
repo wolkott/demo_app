@@ -5,7 +5,8 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-kz%0-6g7b5w^*j3p=*1b3qo3fe4&p%m7r8r^-(bo2+cb2q5d5s'
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -13,8 +14,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "crispy_forms",
+    "crispy_bootstrap5",
     'books',
     ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

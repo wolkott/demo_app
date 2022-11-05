@@ -1,14 +1,26 @@
 from django import forms
-from .models import Author
+from .models import Author, Book
+from crispy_forms.helper import FormHelper,reverse
 
 
-class AuthorForm(forms.Form):
-    name = forms.CharField(max_length=100)
-    address = forms.CharField(max_length=200)
-    url = forms.CharField(max_length=200)
+class AuthorForm(forms.ModelForm):
+    class Meta:
+        model = Author
+        fields = ('name', 'address', 'url')
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.form_method = 'POST'
 
 
-class BookForm(forms.Form):
-    title = forms.CharField(max_length=150)
-    pages = forms.IntegerField
-    price = forms.DecimalField(max_digits=5, decimal_places=2)
+class BookForm(forms.ModelForm):
+    class Meta:
+        model = Book
+        fields = ('title', 'price','author')
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.form_method = 'POST'
+        self.helper.render_required_fields = False
